@@ -41,13 +41,6 @@ namespace ColsestValueConsole
       Print(MinValue(combinations).Where(c => c.Item3 >= value).ToList());
     }
 
-    static void Print(List<Tuple<double, double, double>> tuples)
-    {
-      if (tuples.Count <= 0) WriteLine("Case: pair sum couldn't fill up the target value");
-      if (tuples.Count > 0) Write("Case: {0},\t {1},\t Target Value: {2} \n", tuples[0].Item1, tuples[0].Item2, tuples[0].Item3);
-      WriteLine();
-
-    }
 
     static void Combination(IReadOnlyList<double> data, out List<Tuple<double, double, double>> tuples)
     {
@@ -67,6 +60,12 @@ namespace ColsestValueConsole
     static IOrderedEnumerable<Tuple<double, double, double>> MinValue(List<Tuple<double, double, double>> combination)
     {
       return combination.OrderBy(c => c.Item3);
+    }
+
+    static void Print(List<Tuple<double, double, double>> tuples)
+    {
+      if (tuples.Count <= 0) WriteLine("Case: pair sum couldn't fill up the target value");
+      if (tuples.Count > 0) Write("Case: {0},\t {1},\t Target Value: {2} \n", tuples[0].Item1, tuples[0].Item2, tuples[0].Item3);
 
     }
 
