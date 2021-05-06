@@ -31,8 +31,6 @@ namespace ColsestValueConsole
       FindClosest(test4, targetValue);
 
       ReadKey();
-
-
     }
 
     static void FindClosest(List<double> data, double value)
@@ -44,7 +42,7 @@ namespace ColsestValueConsole
 
     static void Combination(IReadOnlyList<double> data, out List<Tuple<double, double, double>> tuples)
     {
-      tuples = null ?? new List<Tuple<double, double, double>>();
+      tuples = new List<Tuple<double, double, double>>();
       for (var i = 0; i < data.Count - 1; i++)
       {
         for (var j = data.Count - 1; j >= i; j--)
