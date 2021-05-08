@@ -12,7 +12,7 @@ namespace WebApplication2
         }
         public long Id { get; set; }
         [NotMapped]
-        public long loopThroughId { get; set; }
+        public long LoopThroughId { get; set; }
         public string Name { get; set; }
         public string MobileNo { get; set; }
         public string Phone { get; set; }
